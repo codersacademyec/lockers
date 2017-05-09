@@ -17,58 +17,40 @@
 		<title>Login</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row main">
-				<div class="panel-heading">
-	               <div class="panel-title text-center">
-	               		<h1 class="title">Nombre de la compañia</h1>
-	               		<hr />
-	               	</div>
-	            </div> 
-				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
-						
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Tu nombre</label>
-							<div class="cols-sm-3">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" style="max-width: 280px;" class="form-control" name="name" id="name" placeholder="Ingrese su nombre"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Tu telefono</label>
-							<div class="cols-sm-3">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-									<input type="text" style="max-width: 280px;" class="form-control" name="email" id="email" placeholder="Ingrese su telefono"/>
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Tu fecha de nacimiento</label>
-							<div class="cols-sm-3">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-birthday-cake fa" aria-hidden="true"></i></span>
-									<input type="date" style="max-width: 280px;" class="form-control" name="birthdate" id="birthdate" placeholder="Ingrese su fecha de nacimiento"/>
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group ">
-							<button type="button" class="btn btn-primary">Registrarse</button>
-						</div>
-						<div class="login-register">
-				            <a href="index.php">Login</a>
-				         </div>
-					</form>
-				</div>
-			</div>
-		</div>
-
+		 <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body ">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input type="text" style="max-width: 280px;" class="form-control" name="name" id="name" placeholder="Name" autofocus/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" style="max-width: 280px;" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone number"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" style="max-width: 280px;" class="form-control" name="birthdate" id="birthdate" placeholder="Date of birth"/>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                    <a href="registration">Create an account</a>
+                                </div>
+                               <!-- Change this to a button or input when using this as a form -->
+                                <a href="welcome" class="btn btn-lg btn-success btn-block">Login</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>
