@@ -11,4 +11,17 @@ public class LoginController {
 	String home(ModelMap modal) {
 		return "login";
 	}
+	@RequestMapping("/login")
+	String login(ModelMap modal) {
+		return "login";
+	}
+	@RequestMapping(value = "/registration")
+    public String registration(ModelMap modal) {
+        return "registration";
+    }
+	
+	@RequestMapping(value = "/welcome")
+    public String welcome(ModelMap modal) {
+        return "welcome";
+    }
 }
