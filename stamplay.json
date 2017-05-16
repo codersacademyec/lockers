@@ -1,0 +1,10 @@
+{
+  "appId": "lockers",
+  "apiKey": "fde9024e88d30e92e2c525d3ff205349280f5ed2aeb1c4008767cc4daeed91db",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
