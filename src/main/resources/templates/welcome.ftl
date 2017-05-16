@@ -4,8 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-		<!-- Website CSS style -->
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		
 		<!-- MetisMenu CSS -->
    	    <link rel="stylesheet" type="text/css" href="css/metisMenu/metisMenu.min.css" >
    	    <!-- Admin CSS -->
@@ -17,7 +16,8 @@
 		<!-- Google Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
+		<script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.1.4/stamplay.min.js"></script>
+		<script> Stamplay.init("lockers"); </script>
 		<title>Login</title>
 	</head>
 	<body>
@@ -353,6 +353,9 @@
     	<script src="js/sb-admin-2.js"></script>
 		<!-- Metis Menu Plugin JavaScript -->
 		<script src="css/metisMenu/metisMenu.min.js"></script>
+		
+		<script src="js/async-login.js"></script>
+	    
 		<!-- Bootstrap Core JavaScript -->
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
