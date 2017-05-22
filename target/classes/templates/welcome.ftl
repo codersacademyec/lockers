@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Lockers</a>
+                <img src="images/machine1.png" border="0" width="70" height="50">
             </div>
             <!-- /.navbar-header -->
 
@@ -225,16 +225,24 @@
 <!--                     /.dropdown-alerts -->
 <!--                 </li> -->
 <!--                 /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+<!--                 <li class="dropdown"> -->
+<!--                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"> -->
+<!--                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i> -->
+<!--                     </a> -->
+<!--                     <ul class="dropdown-menu dropdown-user"> -->
+<!--                         <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a> -->
+<!--                         </li> -->
+<!--                     </ul> -->
+<!--                     /.dropdown-user -->
+<!--                 </li> -->
+					 <a type="submit" href="login" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+               			 <li class="dropdown">
+                     <a>
+                       Welcome<i class="fa fa-user fa-fw"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
                     <!-- /.dropdown-user -->
                 </li>
+                <!-- /.dropdown -->
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
@@ -295,12 +303,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
+               <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                     <img src="images/cestaimg.png" border="0" width="80" height="70">
+                                     <img src="images/unlock.png" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">3</div>
@@ -310,7 +318,7 @@
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">In transit</span>
+                                <span class="pull-left">Available</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -387,11 +395,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                     <img src="images/unlock.png" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">7</div>
@@ -401,7 +409,7 @@
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">Available</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -410,11 +418,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                     <img src="images/unlock.png" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">8</div>
@@ -424,7 +432,7 @@
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">Available</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -455,12 +463,12 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                 <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img src="images/done.png" border="0" width="60" height="70">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">10</div>
@@ -470,7 +478,7 @@
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">Done</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -478,12 +486,12 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                 <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img src="images/done.png" border="0" width="60" height="70">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">11</div>
@@ -493,7 +501,7 @@
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">Done</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
