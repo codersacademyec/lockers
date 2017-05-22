@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: SpringBoot
 Implementation-Version: 1.0.0
-Built-By: Pc2015
+Built-By: Eddy
 Implementation-Vendor-Id: com.msmata.springboot
-Build-Jdk: 1.8.0_91
+Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/SpringBoot/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

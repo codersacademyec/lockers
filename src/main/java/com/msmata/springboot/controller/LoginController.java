@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 
 	@RequestMapping("/")
-	String home(ModelMap modal) {
+	public String home() {
 		return "login";
 	}
 	@RequestMapping("/login")
