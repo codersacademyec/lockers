@@ -8,7 +8,6 @@
 	
 	function LockersController($timeout,$compile,$http,$scope){
 		var vm = this;
-		
 	}
 	
 	
