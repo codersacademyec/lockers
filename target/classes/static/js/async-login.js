@@ -15,13 +15,13 @@ var loginButton = function (e) {
     	  Stamplay.Object("usuarios").get(query)
     	    .then(function(res) {
     	      // success
-    	    	alert(res.data);
-    	    	if(res.pagination.total_elements > 0){  
-    	    		alert(res.pagination.total_elements)
+    	    	//alert(res.data);
+    	    	//if(res.pagination.total_elements > 0){  
+    	    		//alert(res.pagination.total_elements)
     	    		 window.location.href = 'welcome';
-    	    	}else{
-    	    		alert("login failed");
-    	    	}
+    	    	//}else{
+    	    		//alert("login failed");
+    	    	//}
     	    	
     	    	
     	    	
