@@ -15,7 +15,17 @@ var loginButton = function (e) {
     	  Stamplay.Object("usuarios").get(query)
     	    .then(function(res) {
     	      // success
-    	    	 window.location.href = 'welcome';
+    	    	alert(res.data);
+    	    	if(res.pagination.total_elements > 0){  
+    	    		alert(res.pagination.total_elements)
+    	    		 window.location.href = 'welcome';
+    	    	}else{
+    	    		alert("login failed");
+    	    	}
+    	    	
+    	    	
+    	    	
+    	    	
     	    }, function(err) {
     	      // error
     	    	alert(err.message);
