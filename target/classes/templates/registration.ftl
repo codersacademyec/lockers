@@ -21,12 +21,12 @@
         <div class="row">
         	<div class="col-md-4 col-md-offset-4" align="center">
         		<div class="form-group">
-                    <img src="images/machine1.png" border="0" width="210" height="150">
+                    <img src="images/machine1.png" border="0" width="100" height="70">
                 </div>
              </div>
              <div class="col-md-4 col-md-offset-4" align="center">
         		<div class="form-group">
-        		    <h3 style="color:#337ab7; font-weight: bold;">Create an Account</h3>
+        		    <h4 style="color:#337ab7; font-weight: bold;">Create an Account</h4>
                 </div>
              </div>
             <div class="col-md-4 col-md-offset-4">
@@ -62,6 +62,65 @@
 							  </div>
                               </div>
 						    </div>
+						     <div class="form-group" 
+                             ng-class="{'has-error': registerForm.email.$touched && registerForm.email.$invalid  , 
+                   							 'has-success': registerForm.email.$touched && registerForm.email.$valid   }">
+								<label for="name" class="cols-sm-2 control-label">Email</label>
+								<div class="cols-sm-3">
+                                <div class="input-group">
+                                	<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" 
+                                     ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z.]{2,9}$/" ng-maxlength="50"
+                                     ng-maxlength="20"
+                                     ng-model="vm.emailRegistrer" 
+                                    class="form-control" name="email" id="email" placeholder="email" required/>
+                                </div>
+                                <div class="help-block" ng-messages="registerForm.email.$error" 
+			     								ng-if="registerForm.email.$touched && registerForm.email.$invalid">
+								  <p ng-show="registerForm.email.$error.maxlength">Very long field</p>
+								  <p ng-show="registerForm.email.$error.pattern">Invalid Format</p>
+								  <p ng-hide="registerForm.email.$error.maxlength || registerForm.email.$error.pattern " ng-message="required">This field is required</p>
+							  </div>
+                              </div>
+						    </div>
+						    <div class="form-group"
+                             ng-class="{'has-error': registerForm.password.$touched && registerForm.password.$invalid  , 
+                   							 'has-success': registerForm.password.$touched && registerForm.password.$valid   }">
+								<label for="name" class="cols-sm-2 control-label">Create a Password</label>
+								<div class="cols-sm-3">   
+	                                <div class="input-group">
+	                                	<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+	                                    <input type="password" 
+                                         ng-maxlength="12"
+                                         ng-model="vm.passwordRegister"
+	                                  	 class="form-control" name="password" id="password" placeholder="Password" required/>
+	                                </div>
+	                                <div class="help-block" ng-messages="registerForm.password.$error" 
+			     						ng-if="registerForm.password.$touched && registerForm.password.$invalid">
+									  <p ng-show="registerForm.password.$error.maxlength">Very long field</p>
+									  <p ng-hide="registerForm.password.$error.maxlength" ng-message="required">This field is required</p>
+								  </div>
+		                             </div>
+							    </div>
+							    <div class="form-group"
+                             	ng-class="{'has-error': (registerForm.passwordConfirm.$touched && registerForm.passwordConfirm.$invalid) || (registerForm.passwordConfirm.$touched && (vm.passwordConfirmRegister != vm.passwordRegister))  , 
+                   							 'has-success': registerForm.passwordConfirm.$touched && registerForm.passwordConfirm.$valid && vm.passwordConfirmRegister == vm.passwordRegister  }">
+								<label for="name" class="cols-sm-2 control-label">Confirm your password</label>
+								<div class="cols-sm-3">   
+	                                <div class="input-group">
+	                                	<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+	                                    <input type="password" 
+                                         ng-maxlength="12"
+                                         ng-model="vm.passwordConfirmRegister"
+	                                  	 class="form-control" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Password" required/>
+	                                </div>
+	                                <div class="help-block" ng-messages="registerForm.passwordConfirm.$error" 
+			     						ng-if="(registerForm.passwordConfirm.$touched && registerForm.passwordConfirm.$invalid) || (registerForm.passwordConfirm.$touched && (vm.passwordConfirmRegister != vm.passwordRegister))">
+									  <p ng-show="vm.passwordConfirmRegister != vm.passwordRegister && vm.passwordRegister!=undefined && vm.passwordRegister != ''">Passwords do not match. Do you want to try again?</p>
+									  <p ng-hide="vm.passwordConfirmRegister != vm.passwordRegister && vm.passwordRegister!=undefined && vm.passwordRegister != '' " ng-message="required">This field is required</p>
+								  </div>
+		                             </div>
+							    </div>
                              <div class="form-group"
                              ng-class="{'has-error': registerForm.phoneNumber.$touched && registerForm.phoneNumber.$invalid  , 
                    							 'has-success': registerForm.phoneNumber.$touched && registerForm.phoneNumber.$valid   }">
@@ -90,7 +149,7 @@
 								<div class="cols-sm-3">   
 	                                <div class="input-group">
 	                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i></span>
-	                                    <input type="text" ng-model="vm.fecha"
+	                                    <input type="text" ng-model="vm.fechaRegister"
 					                    value=""
 	                    				data-valuee=""
 					                    class="form-control" name="birthdate" id="birthdate" placeholder="Date of birth" />      
