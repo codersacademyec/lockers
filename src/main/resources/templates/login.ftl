@@ -31,62 +31,44 @@
                         <form novalidate id="loginForm" name="loginForm" role="form" action="welcome"  method="POST" class="form-signin"  data-parsley-validate> 
                             <fieldset>
                              <div class="form-group" 
-                             ng-class="{'has-error': loginForm.name.$touched && loginForm.name.$invalid  , 
-                   							 'has-success': loginForm.name.$touched && loginForm.name.$valid   }">
-								<label for="name" class="cols-sm-2 control-label">Name</label>
+                             ng-class="{'has-error': loginForm.email.$touched && loginForm.email.$invalid  , 
+                   							 'has-success': loginForm.email.$touched && loginForm.email.$valid   }">
+								<label for="name" class="cols-sm-2 control-label">Email</label>
 								<div class="cols-sm-3">
                                 <div class="input-group">
                                 	<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                     <input type="text" 
-                                     ng-pattern="/^([-a-zA-Z\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00f1\u00d1\u00E4\u00EB\u00EF\u00F6\u00FC\u00C4\u00CB\u00CF\u00D6\u00DC' ]+)$/"
+                                     ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z.]{2,9}$/" ng-maxlength="50"
                                      ng-maxlength="20"
-                                     ng-model="vm.name" 
-                                    class="form-control" name="name" id="name" placeholder="Name" required/>
+                                     ng-model="vm.email" 
+                                    class="form-control" name="email" id="email" placeholder="email" required/>
                                 </div>
-                                <div class="help-block" ng-messages="loginForm.name.$error" 
-			     								ng-if="loginForm.name.$touched && loginForm.name.$invalid">
-								  <p ng-show="loginForm.name.$error.maxlength">Very long field</p>
-								  <p ng-show="loginForm.name.$error.pattern">Invalid Format</p>
-								  <p ng-hide="loginForm.name.$error.maxlength || loginForm.name.$error.pattern " ng-message="required">This field is required</p>
+                                <div class="help-block" ng-messages="loginForm.email.$error" 
+			     								ng-if="loginForm.email.$touched && loginForm.email.$invalid">
+								  <p ng-show="loginForm.email.$error.maxlength">Very long field</p>
+								  <p ng-show="loginForm.email.$error.pattern">Invalid Format</p>
+								  <p ng-hide="loginForm.email.$error.maxlength || loginForm.email.$error.pattern " ng-message="required">This field is required</p>
 							  </div>
                               </div>
 						    </div>
                              <div class="form-group"
-                             ng-class="{'has-error': loginForm.phoneNumber.$touched && loginForm.phoneNumber.$invalid  , 
-                   							 'has-success': loginForm.phoneNumber.$touched && loginForm.phoneNumber.$valid   }">
-								<label for="name" class="cols-sm-2 control-label">Phone Number</label>
+                             ng-class="{'has-error': loginForm.password.$touched && loginForm.password.$invalid  , 
+                   							 'has-success': loginForm.password.$touched && loginForm.password.$valid   }">
+								<label for="name" class="cols-sm-2 control-label">Password</label>
 								<div class="cols-sm-3">   
 	                                <div class="input-group">
-	                                	<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-	                                    <input type="text" 
-	                                     ng-pattern="/^([0-9]+)$/"
+	                                	<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+	                                    <input type="password" 
                                          ng-maxlength="12"
-                                         ng-model="vm.phone"
-	                                  	 class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone number" required/>
+                                         ng-model="vm.password"
+	                                  	 class="form-control" name="password" id="password" placeholder="Password" required/>
 	                                </div>
-	                                <div class="help-block" ng-messages="loginForm.phoneNumber.$error" 
-			     						ng-if="loginForm.phoneNumber.$touched && loginForm.phoneNumber.$invalid">
-									  <p ng-show="loginForm.phoneNumber.$error.maxlength">Very long field</p>
-									  <p ng-show="loginForm.phoneNumber.$error.pattern">Invalid Format</p>
-									  <p ng-hide="loginForm.phoneNumber.$error.maxlength || loginForm.phoneNumber.$error.pattern " ng-message="required">This field is required</p>
+	                                <div class="help-block" ng-messages="loginForm.password.$error" 
+			     						ng-if="loginForm.password.$touched && loginForm.password.$invalid">
+									  <p ng-show="loginForm.password.$error.maxlength">Very long field</p>
+									  <p ng-hide="loginForm.password.$error.maxlength" ng-message="required">This field is required</p>
 								  </div>
 		                             </div>
-							    </div>
-							    <div class="form-group"
-							    ng-class="{'has-error': loginForm.birthdate.$touched && loginForm.birthdate.$invalid  , 
-                   							 'has-success': loginForm.birthdate.$touched && loginForm.birthdate.$valid   }">
-								<label for="name" class="cols-sm-2 control-label">Date of Birth</label>
-								<div class="cols-sm-3">   
-	                                <div class="input-group">
-	                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i></span>
-	                                    <input type="text"  ng-model="vm.fecha"
-					                    class="form-control" name="birthdate" id="birthdate" placeholder="Date of birth" />
-					        		 </div>
-					        		 <div class="help-block" ng-messages="loginForm.birthdate.$error" 
-			     						ng-if="loginForm.birthdate.$touched && loginForm.birthdate.$invalid">
-									  <p ng-show="vm.fecha ==undefined || vm.fecha =='' " ng-message="required">This field is required</p>
-								  </div>
-	                              </div>
 							    </div>
                                 <div class="checkbox">
                                     <label>

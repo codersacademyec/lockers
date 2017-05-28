@@ -230,12 +230,12 @@
 <!--                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i> -->
 <!--                     </a> -->
 <!--                     <ul class="dropdown-menu dropdown-user"> -->
-<!--                         <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a> -->
+<!--                         <li><a href="login"  ><i class="fa fa-sign-out fa-fw"></i> Logout</a> -->
 <!--                         </li> -->
 <!--                     </ul> -->
 <!--                     /.dropdown-user -->
 <!--                 </li> -->
-					 <a type="submit" href="login" class="btn btn-primary btn-sm" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+					 <a type="submit" href="login" class="btn btn-primary btn-sm" style="width:100px; height:40px;" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
                			 <li class="dropdown">
                      <a>
                        Welcome<i class="fa fa-user fa-fw"></i>
