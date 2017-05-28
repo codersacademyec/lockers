@@ -1,0 +1,4 @@
+com\msmata\springboot\SpringBootStandAloneApp.class
+com\msmata\springboot\controller\LoginController.class
+com\msmata\springboot\dll\WS.class
+com\msmata\springboot\dll\TestDLL.class
