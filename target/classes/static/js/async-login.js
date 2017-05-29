@@ -1,18 +1,20 @@
 var loginButton = function (e) {
   e.preventDefault();
+  Stamplay.init("lockers"); 
+
   //var isValid = $('#login-form').parsley().validate();
   //if (isValid) {
-    var name = $('#name').val();
-    var phoneNumber = $('#phoneNumber').val();
-    var birthDate = $('#birthDate').val();
-    var query = {
+    var email = $('#email').val();
+    var password = $('#password').val();
+   // var birthDate = $('#birthDate').val();
+    /*var query = {
     	    nombre : name,
     	    telefono: phoneNumber,
     	    fechaNacimiento: birthDate
     	    
     	  }
 
-    	  Stamplay.Object("usuarios").get(query)
+    	 Stamplay.Object("usuarios").get(query)
     	    .then(function(res) {
     	      // success
     	    	//alert(res.data);
@@ -29,22 +31,24 @@ var loginButton = function (e) {
     	    }, function(err) {
     	      // error
     	    	alert(err.message);
-    	    })
+    	    })*/
     
-    //alert(name);
-    /*var credentials = {
-    		  email : "jackson.mora@gmail.com",
-    		  password : "123123"
+    
+    var credentials = {
+    		  email : email,
+    		  password : password
     		}
 
     		Stamplay.User.login(credentials)
     		  .then(function(res) {
     		   // success
+    			  
+    			  console.log('login usuarios user.login ' + res.email);
     			  window.location.href = 'welcome';
     		  }, function(err) {
     		    // error'
-    			  alert(err.message);
-    		  })*/
+    			  alert("Invalid credentials");
+    		  })
     // user.login(name, phoneNumber, birthDate).then(refreshData).done();
     // user.login("jackson.mora@gmail.com","w0lvErines");
   //}
