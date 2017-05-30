@@ -12,8 +12,7 @@ var registrationFn = function (e) {
     var fechaNacimiento = $('#birthdate').val();
     var email = $('#email').val() ;
     var password = $('#password').val();
-    alert(email);
-    alert(password);
+   
     var registrationData = {
       nombre: nombre,
       telefono: telefono,

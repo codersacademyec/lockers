@@ -47,7 +47,7 @@ var loginButton = function (e) {
     			  window.location.href = 'welcome';
     		  }, function(err) {
     		    // error'
-    			  alert("Invalid credentials");
+    			  $('.modal-message-failLogin').modal();
     		  })
     // user.login(name, phoneNumber, birthDate).then(refreshData).done();
     // user.login("jackson.mora@gmail.com","w0lvErines");

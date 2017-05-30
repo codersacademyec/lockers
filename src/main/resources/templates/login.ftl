@@ -88,6 +88,26 @@
         </div>
     </div>
     
+    <div class="modal modal-message-failLogin fade" id="ventana" tabindex="-1" role="dialog">
+	   <div class="modal-dialog modal-sm" role="document">
+	      <div class="modal-content">
+	         <form novalidate name="sugerenciaForm">
+	            <div  class="modal-body">
+	               <h4 class="text-center">Invalid credentials</h4>
+	            </div>
+	            <div class="modal-footer">
+	              <div class="text-center">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" >Ok</button>
+                  </div>  
+	            </div>
+	         </form>
+	      </div>
+	      <!-- /.modal-content -->
+	   </div>
+	   <!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+    
     <link rel="stylesheet" href="js/pickadate.js-3.5.6/lib/themes/default.css" />
     <link rel="stylesheet" href="js/pickadate.js-3.5.6/lib/themes/default.date.css" />
     <script src="js/pickadate.js-3.5.6/tests/jquery.1.7.0.js"></script>
