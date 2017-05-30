@@ -6,6 +6,10 @@ var logoutFn = function (e) {
 		 	if(res){
 		 		console.log('success logout');
 		 		window.location.href = '/SpringBoot';
+		 	}else{
+		 		console.log('error logout');
+		 		console.log(err);
+		 		window.location.href = '/SpringBoot';
 		 	}
 		  })
 	

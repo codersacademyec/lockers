@@ -238,7 +238,7 @@
 					 <label>
                                  <input type="checkbox" ng-model="vm.asisstant" name="assistant" value="assistant">Assistant<br>
                                     </label> 
-					 <a type="submit" href="login" class="btn btn-primary btn-sm" style="width:100px; height:40px;" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+					 <a type="submit" id="logout-button" class="btn btn-primary btn-sm" style="width:100px; height:40px;" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
                			 <li class="dropdown">
                      <a data-toggle="modal" data-target=".modal-message-available" href="#">
                        Welcome<i class="fa fa-user fa-fw"></i>
@@ -567,7 +567,7 @@
 		<!-- Metis Menu Plugin JavaScript -->
 		<script src="css/metisMenu/metisMenu.min.js"></script>
 		
-		<script src="js/async-login.js"></script>
+		<script src="js/logout.js"></script>
 		
 		<script type="text/javascript" src="angular/angular.min.js" th:src"@{angular.min.js}" ></script>
 	    <script type="text/javascript" src="app/app.module.js" th:src"@{/app/app.module.js}" ></script>
