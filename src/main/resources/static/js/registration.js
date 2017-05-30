@@ -24,9 +24,10 @@ var registrationFn = function (e) {
     .then(function(res) {
       // Success
     	console.log('save usuarios user.signup ' + res);
-    	alert("Success");
+    	$('.modal-message-success').modal();
     }, function(err) {
       // Handle Error
+    	$('.modal-message-fail').modal();
     	console.log('Error during user.signup ' + err.message);
     });
 

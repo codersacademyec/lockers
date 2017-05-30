@@ -20,7 +20,7 @@
 		<script> Stamplay.init("lockers"); </script>
 		<title>Login</title>
 	</head>
-	<body>
+	<body ng-app="app" ng-controller="LockersController as vm">
 		<div id="wrapper">
 		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -235,9 +235,12 @@
 <!--                     </ul> -->
 <!--                     /.dropdown-user -->
 <!--                 </li> -->
+					 <label>
+                                 <input type="checkbox" ng-model="vm.asisstant" name="assistant" value="assistant">Assistant<br>
+                                    </label> 
 					 <a type="submit" href="login" class="btn btn-primary btn-sm" style="width:100px; height:40px;" ><span class="glyphicon glyphicon-log-out"></span>Logout</a>
                			 <li class="dropdown">
-                     <a>
+                     <a data-toggle="modal" data-target=".modal-message-available" href="#">
                        Welcome<i class="fa fa-user fa-fw"></i>
                     </a>
                     <!-- /.dropdown-user -->
@@ -260,11 +263,11 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
+                    <div class="{{vm.lockerOne.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                     <img src="images/unlock.png" border="0" width="80" height="75">
+                                     <img ng-src="{{vm.lockerOne.logo}}" ng-init="vm.lockerOne.logo='images/unlock.png' " border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">1</div>
@@ -273,8 +276,8 @@
                             </div>
                         </div>
                         <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Available</span>
+                            <div class="panel-footer"  ng-click= "vm.asignarLocker(vm.lockerOne)" data-toggle="modal" data-target=".modal-message-available" href="#">
+                                <span class="pull-left">{{vm.lockerOne.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -282,11 +285,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
+                    <div class="{{vm.lockerTwo.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/done.png" border="0" width="60" height="70">
+                                    <img ng-src="{{vm.lockerTwo.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">2</div>
@@ -294,9 +297,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerTwo)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Done</span>
+                                <span class="pull-left">{{vm.lockerTwo.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -304,11 +307,11 @@
                     </div>
                 </div>
                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
+                    <div class="{{vm.lockerThree.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                     <img src="images/unlock.png" border="0" width="80" height="75">
+                                     <img ng-src="{{vm.lockerThree.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">3</div>
@@ -316,9 +319,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerThree)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Available</span>
+                                <span class="pull-left">{{vm.lockerThree.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -326,11 +329,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="{{vm.lockerFour.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img ng-src="{{vm.lockerFour.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">4</div>
@@ -338,9 +341,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerFour)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Occupied</span>
+                                <span class="pull-left">{{vm.lockerFour.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -349,11 +352,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="{{vm.lockerFive.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                   <img src="images/lock.png" border="0" width="70" height="60">
+                                   <img ng-src="{{vm.lockerFive.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">5</div>
@@ -361,9 +364,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerFive)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">{{vm.lockerFive.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -372,11 +375,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="{{vm.lockerSix.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img ng-src="{{vm.lockerSix.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">6</div>
@@ -384,9 +387,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerSix)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">{{vm.lockerSix.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -395,11 +398,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
+                    <div class="{{vm.lockerSeven.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                     <img src="images/unlock.png" border="0" width="80" height="75">
+                                     <img ng-src="{{vm.lockerSeven.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">7</div>
@@ -407,9 +410,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerSeven)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Available</span>
+                                <span class="pull-left">{{vm.lockerSeven.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -418,11 +421,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
+                    <div class="{{vm.lockerEight.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                     <img src="images/unlock.png" border="0" width="80" height="75">
+                                     <img ng-src="{{vm.lockerEight.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">8</div>
@@ -430,9 +433,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerEight)" data-toggle="modal" data-target=".modal-message-available" >
                             <div class="panel-footer">
-                                <span class="pull-left">Available</span>
+                                <span class="pull-left">{{vm.lockerEight.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -441,11 +444,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="{{vm.lockerNine.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img ng-src="{{vm.lockerNine.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">9</div>
@@ -453,9 +456,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerNine)" data-toggle="modal" data-target=".modal-message-available" >
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">{{vm.lockerNine.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -464,11 +467,11 @@
                 </div>
                 
                  <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
+                    <div class="{{vm.lockerTen.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/done.png" border="0" width="60" height="70">
+                                    <img ng-src="{{vm.lockerTen.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">10</div>
@@ -476,9 +479,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerTen)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Done</span>
+                                <span class="pull-left">{{vm.lockerTen.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -487,11 +490,11 @@
                 </div>
                 
                  <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
+                    <div class="{{vm.lockerEleven.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/done.png" border="0" width="60" height="70">
+                                    <img ng-src="{{vm.lockerEleven.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">11</div>
@@ -499,9 +502,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerEleven)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">Done</span>
+                                <span class="pull-left">{{vm.lockerEleven.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -510,11 +513,11 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
+                    <div class="{{vm.lockerTwelve.color}}">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images/lock.png" border="0" width="70" height="60">
+                                    <img ng-src="{{vm.lockerTwelve.logo}}" border="0" width="80" height="75">
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">12</div>
@@ -522,9 +525,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#" ng-click= "vm.asignarLocker(vm.lockerTwelve)" data-toggle="modal" data-target=".modal-message-available">
                             <div class="panel-footer">
-                                <span class="pull-left">occupied</span>
+                                <span class="pull-left">{{vm.lockerTwelve.nameStatus}}</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -535,6 +538,28 @@
             </div>
 		 </div>
 		</div>
+		
+		<div class="modal modal-message-available fade" id="ventana" tabindex="-1" role="dialog">
+	   <div class="modal-dialog modal-sm" role="document">
+	      <div class="modal-content">
+	         <form novalidate ng-submit="vm.cambiarEstado(vm.locker)" name="sugerenciaForm">
+	            <div  class="modal-body">
+	               <h4 class="text-center">{{vm.message}}</h4>
+	            </div>
+	            <div class="modal-footer">
+	              <div class="text-center">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Ok</button>
+                  </div>  
+	            </div>
+	         </form>
+	      </div>
+	      <!-- /.modal-content -->
+	   </div>
+	   <!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal --> 
+		
 		 <!-- jQuery -->
     	<script src="css/jquery/jquery.min.js"></script>
 		<!-- Custom Theme JavaScript -->
@@ -543,8 +568,13 @@
 		<script src="css/metisMenu/metisMenu.min.js"></script>
 		
 		<script src="js/async-login.js"></script>
+		
+		<script type="text/javascript" src="angular/angular.min.js" th:src"@{angular.min.js}" ></script>
+	    <script type="text/javascript" src="app/app.module.js" th:src"@{/app/app.module.js}" ></script>
+	    <script type="text/javascript" src="app/lockers.controller.js" th:src"@{/app/lockers.controller.js}" ></script>
 	    
 		<!-- Bootstrap Core JavaScript -->
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	</body>
 </html>
