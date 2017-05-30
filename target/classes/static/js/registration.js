@@ -1,9 +1,6 @@
 
+Stamplay.init("lockers"); 
 
-/*Stamplay.currentUser((function () {
-  refreshData();
-}));
-*/
 var registrationFn = function (e) {
   e.preventDefault();
   var isValid = true ; //$('#reg-form').parsley().validate();
@@ -13,12 +10,21 @@ var registrationFn = function (e) {
     var nombre = $('#name').val();
     var telefono = $('#phoneNumber').val();
     var fechaNacimiento = $('#birthdate').val();
+    var email = $('#email').val() ;
+    var password = $('#password').val();
+    alert(email);
+    alert(password);
     var registrationData = {
       nombre: nombre,
       telefono: telefono,
       fechaNacimiento: fechaNacimiento
     };
-    
+    var signinUpData = {
+    	email: email,
+    	password: password,
+    	displayName: name
+    		
+    };
     Stamplay.Object("usuarios")
     .save(registrationData)
     .then(function(res) {
@@ -31,15 +37,20 @@ var registrationFn = function (e) {
     	console.log('Error during user.signup ' + err.message);
     });
 
-    /*Stamplay.User.signup(registrationData)
-      .then(refreshData, handleSignupError)
-      .then(finalCb, handleRefreshDataError)
-      .done()*/
+       
+    Stamplay.User
+    .signup(signinUpData,
+      function(err, res) {
+        if(err) return console.log(err);
+        console.log(res);
+    });
   }
 }
 
-var registerUser = function (registrationData) {
-  return Stamplay.User.signup(registrationData)
+
+
+var registerUser = function (signinUpData) {
+  return Stamplay.User.signup(signinUpData)
 }
 
 var handleSignupError = function (err) {
